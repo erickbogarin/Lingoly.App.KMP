@@ -7,6 +7,7 @@ import kotlinx.serialization.Serializable
 data class DialogDto(
     val id: String,
     val title: Map<String, String>,
-    val phrases: Map<String, PhraseDto>,
+    val tags: List<String> = emptyList(),
+    val phrases: List<PhraseDto>,
     val meta: DialogMetaDto
 )

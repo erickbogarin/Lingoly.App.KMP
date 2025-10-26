@@ -7,5 +7,5 @@ import kotlinx.serialization.Serializable
 data class SubcategoryDto(
     val id: String,
     val name: Map<String, String>,
-    val dialogs: Map<String, DialogDto>
+    val dialogs: List<DialogDto>
 )

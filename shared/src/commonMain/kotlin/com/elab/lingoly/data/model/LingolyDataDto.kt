@@ -1,0 +1,11 @@
+package com.elab.lingoly.data.model
+
+import com.elab.lingoly.data.model.category.CategoryDto
+import com.elab.lingoly.data.model.user.UserDataDto
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class LingolyDataDto(
+    val categories: List<CategoryDto>,
+    val userData: UserDataDto
+)

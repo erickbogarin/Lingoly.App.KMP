@@ -7,5 +7,5 @@ import kotlinx.serialization.Serializable
 data class CategoryDto(
     val id: String,
     val name: Map<String, String>,
-    val subcategories: Map<String, SubcategoryDto>
+    val subcategories: List<SubcategoryDto>
 )
