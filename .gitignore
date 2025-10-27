@@ -18,3 +18,5 @@ local.properties
 # Kotlin Multiplatform specifics
 androidApp/build/
 shared/build/
+
+.kotlin/
