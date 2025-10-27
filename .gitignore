@@ -1,1 +1,20 @@
+# Gradle
+.gradle/
+build/
+**/build/
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+
+# Local configuration
 local.properties
+*.log
+
+# Temporary files
+*.tmp
+*.zip
+
+# Kotlin Multiplatform specifics
+androidApp/build/
+shared/build/
