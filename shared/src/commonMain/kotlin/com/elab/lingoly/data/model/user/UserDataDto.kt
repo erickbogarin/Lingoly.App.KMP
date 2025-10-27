@@ -2,6 +2,7 @@ package com.elab.lingoly.data.model.user
 
 import kotlinx.serialization.Serializable
 
+@Serializable
 data class UserDataDto(
     val name: String = "",
     val completedDialogs: List<String> = emptyList(),

@@ -1,0 +1,74 @@
+{
+  "categories": [
+    {
+      "id": "restaurant",
+      "name": {
+        "en": "Restaurant",
+        "pt": "Restaurante"
+      },
+      "subcategories": [
+        {
+          "id": "ordering_food",
+          "name": {
+            "en": "Ordering Food",
+            "pt": "Fazendo Pedido"
+          },
+          "dialogs": [
+            {
+              "id": "d1",
+              "title": {
+                "en": "Ordering Salmon",
+                "pt": "Pedindo Salmão"
+              },
+              "tags": ["restaurant", "ordering", "food"],
+              "meta": {
+                "xpReward": 10,
+                "estimatedTime": 45,
+                "difficulty": "easy",
+                "targetLanguage": "en"
+              },
+              "phrases": [
+                {
+                  "id": "p1",
+                  "role": "CUSTOMER",
+                  "translations": {
+                    "en": "I'd like to order the grilled salmon, please.",
+                    "pt": "Gostaria de pedir o salmão grelhado, por favor."
+                  },
+                  "tips": {
+                    "en": "'I'd like to' is a polite way to ask for something.",
+                    "pt": "'I'd like to' é uma forma educada de pedir algo."
+                  }
+                },
+                {
+                  "id": "p2",
+                  "role": "WAITER",
+                  "translations": {
+                    "en": "Would you like any sides with that?",
+                    "pt": "Gostaria de algum acompanhamento?"
+                  },
+                  "tips": {
+                    "en": "The word 'sides' refers to side dishes like rice or salad.",
+                    "pt": "A palavra 'sides' se refere a acompanhamentos como arroz ou salada."
+                  }
+                },
+                {
+                  "id": "p3",
+                  "role": "CUSTOMER",
+                  "translations": {
+                    "en": "Yes, mashed potatoes, please.",
+                    "pt": "Sim, purê de batatas, por favor."
+                  },
+                  "tips": {
+                    "en": "You can also say 'mashed potato' in singular — both are correct.",
+                    "pt": "Também é possível dizer 'mashed potato' no singular — ambos estão corretos."
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

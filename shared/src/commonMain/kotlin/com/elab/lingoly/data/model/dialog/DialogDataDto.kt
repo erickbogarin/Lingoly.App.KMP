@@ -6,6 +6,6 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class DialogDataDto (
-    val categories: Map<String, CategoryDto>,
-    val userData: UserDataDto,
+    val categories: List<CategoryDto>,
+    val userData: UserDataDto? = null
 )

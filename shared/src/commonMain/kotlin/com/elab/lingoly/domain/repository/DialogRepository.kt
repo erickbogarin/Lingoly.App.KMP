@@ -11,4 +11,6 @@ interface DialogRepository {
     suspend fun getDialogsBySubcategory(categoryId: String, subcategoryId: String): DataResult<List<Dialog>>
     suspend fun getDialog(dialogId: String): DataResult<Dialog>
     suspend fun getAllDialogs(): DataResult<List<Dialog>>
+    suspend fun getDialogsByDifficulty(difficulty: String): DataResult<List<Dialog>>
+    suspend fun getDialogsByLanguage(languageCode: String): DataResult<List<Dialog>>
 }
