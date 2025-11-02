@@ -6,6 +6,8 @@ data class Translation(
     fun get(language: Language): String? = translations[language]
 
     fun getOrDefault(language: Language, fallback: Language = Language.ENGLISH): String {
-        return translations[language] ?: translations[fallback] ?: translations.values.first()
+        return translations[language]
+            ?: translations[fallback]
+            ?: ""
     }
 }

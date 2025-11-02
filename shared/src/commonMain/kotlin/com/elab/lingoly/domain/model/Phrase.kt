@@ -13,7 +13,7 @@ data class Phrase(
 
     fun hasTranslation(language: Language): Boolean = translations.get(language) != null
 
-    fun hasTip(language: Language): Boolean = tips.get(language) != null
+    fun hasTips(language: Language): Boolean = tips.get(language) != null
 
     fun getAvailableLanguages(): Set<Language> = translations.translations.keys
 }

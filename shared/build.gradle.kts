@@ -30,12 +30,13 @@ kotlin {
                 implementation(libs.kotlinx.serialization.json)
                 implementation(libs.kotlinx.coroutines.core)
                 implementation(libs.multiplatform.settings)
-                implementation(libs.multiplatform.settings.noarg)
             }
         }
         val commonTest by getting {
             dependencies {
                 implementation(libs.kotlin.test)
+                implementation(libs.kotlinx.coroutines.test)
+                implementation(libs.multiplatform.settings.test)
             }
         }
     }

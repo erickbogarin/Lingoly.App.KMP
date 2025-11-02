@@ -12,6 +12,9 @@ object Constants {
     const val KEY_TARGET_LANGUAGE = "target_language" // For explicit storage if needed
     const val KEY_HAS_COMPLETED_ONBOARDING = "has_completed_onboarding" // NEW
 
+    const val KEY_ONBOARDING_COMPLETED = "onboarding_completed"
+
+
     // Data
     const val JSON_FILE = "dialogs.json"
 
