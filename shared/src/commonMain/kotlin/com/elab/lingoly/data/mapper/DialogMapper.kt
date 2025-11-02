@@ -15,14 +15,19 @@ import com.elab.lingoly.domain.model.Translation
 
 object DialogMapper {
 
+    private fun mapLanguageKeys(input: Map<String, String>): Map<Language, String> {
+        val out = mutableMapOf<Language, String>()
+        for ((code, text) in input) {
+            val lang = Language.fromCode(code) ?: Language.ENGLISH
+            out[lang] = text
+        }
+        return out
+    }
+
     fun toDomain(dto: CategoryDto): Category {
         return Category(
             id = dto.id,
-            name = Translation(
-                translations = dto.name.mapKeys { (code, _) ->
-                    Language.fromCode(code) ?: Language.ENGLISH
-                }
-            ),
+            name = Translation(translations = mapLanguageKeys(dto.name)),
             subcategories = dto.subcategories.map { toDomain(it, dto.id) }
         )
     }
@@ -30,11 +35,7 @@ object DialogMapper {
     fun toDomain(dto: SubcategoryDto, categoryId: String): Subcategory {
         return Subcategory(
             id = dto.id,
-            name = Translation(
-                translations = dto.name.mapKeys { (code, _) ->
-                    Language.fromCode(code) ?: Language.ENGLISH
-                }
-            ),
+            name = Translation(translations = mapLanguageKeys(dto.name)),
             categoryId = categoryId,
             dialogs = dto.dialogs.map { toDomain(it, categoryId, dto.id) }
         )
@@ -43,11 +44,7 @@ object DialogMapper {
     fun toDomain(dto: DialogDto, categoryId: String, subcategoryId: String): Dialog {
         return Dialog(
             id = dto.id,
-            title = Translation(
-                translations = dto.title.mapKeys { (code, _) ->
-                    Language.fromCode(code) ?: Language.ENGLISH
-                }
-            ),
+            title = Translation(translations = mapLanguageKeys(dto.title)),
             categoryId = categoryId,
             subcategoryId = subcategoryId,
             tags = dto.tags,
@@ -61,16 +58,8 @@ object DialogMapper {
             id = dto.id,
             dialogId = dialogId,
             role = dto.role,
-            translations = Translation(
-                translations = dto.translations.mapKeys { (code, _) ->
-                    Language.fromCode(code) ?: Language.ENGLISH
-                }
-            ),
-            tips = Translation(
-                translations = dto.tips.mapKeys { (code, _) ->
-                    Language.fromCode(code) ?: Language.ENGLISH
-                }
-            )
+            translations = Translation(translations = mapLanguageKeys(dto.translations)),
+            tips = Translation(translations = mapLanguageKeys(dto.tips))
         )
     }
 
